@@ -31,6 +31,26 @@ npm start
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
+## To Use with electron-packager
+
+Install electron-packager
+```
+npm install electron-packager -g
+```
+
+Make applicaiton using electron-packager
+```
+electron-packager . app --platform linux --arch x64 --electronVersion 3.0.6 --out dist --overwrite
+electron-packager . app --platform win32 --arch x64 --electronVersion 3.0.6 --out dist --overwrite
+electron-packager . app --platform darwin --arch x64 --electronVersion 3.0.6 --out dist --overwrite
+```
+
+Run electron app in macos
+```
+./dist/app-darwin-x64/app.app/Contents/MacOS/app
+```
+Or, click the icon in folder ./dist/app-darwin-x64/
+
 ## Resources for Learning Electron
 
 - [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
